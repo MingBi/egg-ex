@@ -7,10 +7,16 @@ class PgtestController extends Controller{
   async test(){
     const {app,ctx}=this;
 
-    ctx.body = await app.yushanQuery('select * from tb_third_account limit 1',[]);
+    ctx.body = await app.yushanQuery('select * from TABLE',[]);
   }
 
-  async testseq(){
+  async testService(){
+    const {app,ctx}=this;
+
+    ctx.body = await ctx.service.sqlTest.find();
+  }
+
+  async testSeq(){
     const {app,ctx}=this;
 
     ctx.body = await app.sequelize.authenticate()
