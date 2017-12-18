@@ -32,6 +32,7 @@ class getAndPostController extends Controller{
     }
   }
 
+  //发送一个get请求
   async sendGet(){
     const {app,ctx} = this;
     const url='localhost:8000/getAndPost/receiveGet?user=admin&pass=123&x=5';
@@ -44,6 +45,7 @@ class getAndPostController extends Controller{
     ctx.body=reusult.data;
   }
 
+  //发送一个post请求
   async sendPost(){
     const {app,ctx}=this;
 
@@ -61,7 +63,7 @@ class getAndPostController extends Controller{
 
     ctx.body=results.data;
   }
-  
+
 
 
 }
