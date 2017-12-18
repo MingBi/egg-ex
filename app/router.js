@@ -10,4 +10,10 @@ module.exports = app => {
   router.get('/pgtest/test',controller.pgtest.test);
   router.get('/pgtest/testService',controller.pgtest.testService);
   router.get('/pgtest/testSeq',controller.pgtest.testSeq);
+
+  router.get('/getAndPost/receiveGet',controller.getAndPost.receiveGet);
+  router.post('/getAndPost/receivePost',controller.getAndPost.receivePost);
+  router.get('/getAndPost/sendGet',controller.getAndPost.sendGet);
+  router.get('/getAndPost/sendPost',controller.getAndPost.sendPost);
+
 };
