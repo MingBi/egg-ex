@@ -18,4 +18,6 @@ module.exports = app => {
 
   router.post('/stream/uploadFile',controller.stream.uploadFile);
 
+  router.get('/login/login',controller.login.login);
+
 };
