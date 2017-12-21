@@ -13,12 +13,16 @@ class StreamController extends Controller{
     //得到参数
     const {x,y,z}=stream.fields;
 
-    //得到文件的buffer,之后可以对buffer进行操作，比如node-xlsx插件 xlsx.parse()
+    /*
+     得到文件的buffer,需要将stream读成buffer
+     之后可以对buffer进行操作
+     比如node-xlsx插件 xlsx.parse()
+     */
     const buffer=await ctx.helper.streamToBuffer(stream);
 
     await sendToWormhole(stream);
 
-    ctx.body='ok';buffer
+    ctx.body='ok';
 
   }
 
