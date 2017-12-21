@@ -16,4 +16,6 @@ module.exports = app => {
   router.get('/getAndPost/sendGet',controller.getAndPost.sendGet);
   router.get('/getAndPost/sendPost',controller.getAndPost.sendPost);
 
+  router.post('/stream/uploadFile',controller.stream.uploadFile);
+
 };
