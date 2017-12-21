@@ -7,6 +7,7 @@
     "egg": "^2.0.0",
     "egg-scripts": "^2.1.0",
     "jwt-simple": "^0.5.1",
+    "moment": "^2.20.1",
     "pg": "^6.4.2",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.28.0"
