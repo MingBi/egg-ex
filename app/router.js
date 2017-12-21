@@ -17,6 +17,7 @@ module.exports = app => {
   router.get('/getAndPost/sendPost',controller.getAndPost.sendPost);
 
   router.post('/stream/uploadFile',controller.stream.uploadFile);
+  router.post('/stream/uploadManyFiles',controller.stream.uploadManyFiles);
 
   router.get('/login/login',controller.login.login);
 

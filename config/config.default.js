@@ -23,5 +23,11 @@ module.exports = appInfo => {
     },
   };
 
+  config.multipart={
+    fileExtensions: [ '.xlsx' ], // 增加对 .apk 扩展名的支持
+  }
+
+
+
   return config;
 };
