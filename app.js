@@ -10,6 +10,7 @@ module.exports = app =>{
     //创建一个连接池，具体参数见config，max为最大连接数
     app.pool_yushan = new pg.Pool(app.config.yushan);
 
+    //sequelize没写完
     app.sequelize=new Sequelize(app.config.yushan.database,app.config.yushan.user,app.config.yushan.password,{
       host:app.config.yushan.host,
       port:app.config.yushan.port,

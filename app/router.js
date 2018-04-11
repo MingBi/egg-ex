@@ -21,4 +21,7 @@ module.exports = app => {
 
   router.get('/login/login',controller.login.login);
 
+  //restful 定义路由
+  router.resources('users','/api/users',controller.restfulapi.users)
+
 };
