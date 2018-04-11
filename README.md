@@ -11,3 +11,5 @@ node>=8.9.1
 本项目持续更新，完善
 
 2018-04-11 新增restfulapi
+
+预告-passport、参数验证、报错机制、grapql、sequilize
