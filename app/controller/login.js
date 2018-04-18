@@ -1,15 +1,23 @@
 'use strict';
 
-const Controller=require('egg').Controller;
-
 const moment = require('moment');
 const crypto = require('crypto');
 const jwt = require('jwt-simple');
+
+
+const Controller=require('egg').Controller;
+
+const loginRule={
+  username:'string',
+  password:'string',
+  key:'string'
+}
 
 class LoginController extends Controller{
 
   async login(){
     const{app,ctx}=this;
+    ctx.validate(loginRule,ctx.request.query);
     const {username,password,key}=ctx.request.query;
     const expires=moment().add(1,'days').valueOf();
     //数据库中存的是md5之后的password
