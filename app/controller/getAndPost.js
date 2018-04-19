@@ -1,7 +1,7 @@
 const Controller = require('egg').Controller;
 
 const receiveGetRule={
-  user:'string',
+  user:{type: 'string', max:20,min:1 },
   pass:'string',
 }
 
@@ -21,6 +21,8 @@ class getAndPostController extends Controller{
     //参数验证 可以这种方式，get不能不填第二个参数，post可以不填第二个参数。暂时没找到相关文档，立个flag看源码研究下
     ctx.validate(receiveGetRule,ctx.request.query);
 
+    let a=[];
+    a[0].body
     //ctx.validate(receiveGetRule);
     //get请求的参数获取
     const {user,pass,x:y}=ctx.request.query;

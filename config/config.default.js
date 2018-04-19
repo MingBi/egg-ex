@@ -9,7 +9,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1513067096519_9462';
 
   // add your config here
-  config.middleware = ['jwtauth', 'logging', 'bejson'];
+  config.middleware = ['logging','errorHandle','jwtauth',  'bejson'];
 
   config.logger = {
     dir: path.join(path.dirname(__dirname), '/logs'),

@@ -4,6 +4,15 @@ module.exports = () => {
     try {
       await next();
 
+      
+
+      if(ctx.response.status===404){
+        let e= new Error()
+        e.status=404;
+        e.message='404 not found'
+        throw e
+      }
+
       //如果返回的是文件
       if (Buffer.isBuffer(ctx.body)) return;
 
@@ -18,16 +27,8 @@ module.exports = () => {
         status: 'success',
         data: ctx.body,
       };
-    } catch (error) {
-
-      //如果next报错
-      ctx.body = {
-        code: 1,
-        status: 'failed',
-        message: error,
-      };
-      //把这个error扔给下一个中间件处理，在本项目中，给logging
-      throw error;
+    } catch (err) {
+      throw err;
     }
 
 

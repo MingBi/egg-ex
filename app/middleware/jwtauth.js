@@ -26,6 +26,9 @@ module.exports = () => {
       } catch (err) {
         throw new Error(err);
       }
+    }else{
+      //去掉此处token开启token验证
+      //throw new Error('no token');
     }
 
     await next();
