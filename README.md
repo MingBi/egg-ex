@@ -12,4 +12,6 @@ node>=8.9.1
 
 2018-04-11 新增restfulapi
 
-预告-参数验证、报错机制、grapql、sequilize
+2018-04-18 新增参数校验
+
+预告-报错机制、grapql、sequilize
