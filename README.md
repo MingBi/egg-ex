@@ -16,4 +16,4 @@ node>=8.9.1
 
 2018-04-19 新增报错机制、调整中间件顺序、优化中间件
 
-预告-grapql、sequilize
+预告-graphql、sequilize
